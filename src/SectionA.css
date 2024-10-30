@@ -1,0 +1,321 @@
+/* Container principal */
+.tetris-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    min-height: 100vh;
+    color: #fff;
+    justify-content: center;
+  }
+  
+  /* Estilo da pontuação e nível */
+  .score {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'myfontttt';
+    margin-left: 20px;
+  }
+  
+  .score-text,
+  .level-text {
+    margin: 0 10px;
+  }
+  
+  .score-space {
+    width: 30px;
+  }
+  
+  /* Área do jogo */
+  .game-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Contêiner dos botões */
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    position: absolute;
+    margin-right: 1100px;
+  }
+  
+  .nametoken {
+    height: 100px;
+    width: 700px;
+    position: absolute;
+    font-size: 90px;
+    font-family: 'myfontttt';
+    margin-top: -100px;
+    margin-right: -20px;
+    color:#ffffff ;
+  }
+  
+  /* Estilo dos botões sociais */
+  .social-button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 25px;
+    background-color: #9900ff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 130px;
+    gap: 10px;
+    transition: transform 0.3s ease; /* Adicionado */
+  }
+  
+  .social-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1); /* Adicionado */
+  }
+  
+  .social-button h1{
+    font-size: 40px;
+    height: 40px;
+    margin: 5px;
+    width: 200px;
+    font-family: myfontttt;
+  }
+
+  .social-button h2{
+    font-size: 40px;
+    height: 40px;
+    margin: 5px;
+    width: 200px;
+    font-family: myfontttt;
+  }
+
+
+  .social-button h3{
+    font-size: 40px;
+    height: 40px;
+    margin: 5px;
+    width: 200px;
+    font-family: myfontttt;
+  }
+
+
+   /* Estilo do jogo */
+  .tetris {
+    display: inline-block;
+    background-color: #222;
+    padding: 10px;
+    border: 2px solid #555;
+  }
+  
+  /* Caixa 'How to Play' */
+  .how-to-play {
+    position: absolute;
+    background-color: #111;
+    border: 2px solid #555;
+    padding: 15px 20px;
+    margin-left: 20px;
+    color: #fff;
+    width: 200px;
+    margin-left: 1100px;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .how-to-play h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #9900ff;
+    font-family: 'myfont';
+  }
+  
+  .how-to-play p {
+    margin-top: 4dvb;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo das linhas */
+  .row {
+    display: flex;
+  }
+  
+  /* Estilo das células */
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    background-color: #111;
+  }
+  
+  .cell.filled {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .cell.fixed {
+    animation: fixAnimation 0.3s forwards;
+  }
+  
+  @keyframes fixAnimation {
+    0% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+  
+  .cell.clearing {
+    animation: lineClear 0.5s forwards;
+  }
+  
+  @keyframes lineClear {
+    0% {
+      background-color: #ff4d4d;
+    }
+    50% {
+      background-color: #ffffff;
+    }
+    100% {
+      background-color: #111;
+    }
+  }
+  
+  /* Estilo do Game Over */
+  .game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ff4d4d;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+    font-family: 'myfontB';
+  }
+  
+  .game-over button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #9900ff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-family: 'myfontttt';
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Adicionado */
+  }
+  
+  .game-over button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1); /* Adicionado */
+  }
+  
+  /* Tela inicial */
+  .start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  .start-screen button {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #9900ff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-family: 'myfontttt';
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Adicionado */
+  }
+  
+  .start-screen p{
+    height: 20px;
+    margin: 5px;
+    width: 170px;
+  }
+
+  .start-screen button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1); /* Adicionado */
+  }
+  
+  /* Fonte personalizada */
+  @font-face {
+    font-family: 'myfont';
+    src: url('/Tetris.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'myfontttt';
+    src: url('/PixelGameFont.ttf') format('truetype');
+  }
+
+
+  /* Estilos para as peças com imagens */
+  .cell.I {
+    background-image: url('/iPiece.png');
+  }
+  
+  .cell.O {
+    background-image: url('/oPiece.png');
+  }
+  
+  .cell.T {
+    background-image: url('/tPiece.png');
+  }
+  
+  .cell.Z {
+    background-image: url('/zPiece.png');
+  }
+  
+  .cell.S {
+    background-image: url('/sPiece.png');
+  }
+  
+  .cell.L {
+    background-image: url('/lPiece.png');
+  }
+  
+  .cell.J {
+    background-image: url('/jPiece.png');
+  }
+  
+  /* Estilo do body com imagem de fundo */
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/hqdefault.jpg'); /* Use o caminho da sua imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+
+  button h1{
+    font-size: 20px;
+    height: 20px;
+    margin: 5px;
+    width: 100px;
+    font-family: myfontttt;
+  }
+
+
